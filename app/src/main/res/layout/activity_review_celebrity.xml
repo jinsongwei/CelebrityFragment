@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.williamjin.celeberity.ReviewCelebrityActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Review"
+        android:textColor="@android:color/holo_purple"
+        android:textSize="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name: "
+        android:textColor="@android:color/black"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/et_review_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Celebrity's Name" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btn_read_review"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/holo_green_light"
+            android:onClick="handleReviewOption"
+            android:text="Read Review" />
+
+        <Button
+            android:id="@+id/btn_write_review"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/holo_purple"
+            android:onClick="handleReviewOption"
+            android:text="Write a reivew" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_review_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Review: "
+        android:textColor="@android:color/black"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/tv_read_review_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="this text from file system"
+        android:textColor="@android:color/black"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/et_write_review"
+        android:hint="this content will save into external storage "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_send_review"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:onClick="handleReviewOption"
+        android:text="send"
+        android:textColor="@android:color/black" />
+
+</LinearLayout>

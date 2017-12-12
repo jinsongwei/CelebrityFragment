@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.williamjin.celeberity.activities.AddCelebrityActivity">
+
+    <EditText
+        android:id="@+id/et_celebrity_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="name" />
+
+    <EditText
+        android:id="@+id/et_celebrity_gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="gender (M/F)" />
+
+    <EditText
+        android:id="@+id/et_celebrity_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="type" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <ImageButton
+            android:id="@+id/btn_favorite"
+            android:onClick="handleFavoriteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:src="@drawable/ic_favorite_red" />
+
+        <ImageButton
+            android:onClick="handleFavoriteButton"
+            android:id="@+id/btn_unfavorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:src="@drawable/ic_favorite_black" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_add_celebrity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_green_light"
+        android:onClick="handleAddCelebrity"
+        android:text="ADD"
+        android:textSize="30dp" />
+</LinearLayout>
